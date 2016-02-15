@@ -1,0 +1,26 @@
+        .display-block {
+            display: block;
+            text-align: center;
+        }
+        
+        .block {
+            border: 1px solid black;
+            height: 150px;
+            width: 150px;
+        }
+        
+        .blue {
+            background: lightblue;
+        }
+        
+        .red {
+            background: red;
+        }
+        
+        .is-visible {
+            display: block;
+        }
+        
+        .is-hidden {
+            display: none;
+        }

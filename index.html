@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Tester</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body data-ng-app="TEST">
+    <div data-directive-test data-ng-init="init()">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="page-header">
+                        <h1>AK Angular Test <small>A quick demo app</small></h1>
+                    </div>
+                    <p>
+                        When you click on the button below we want to increment the click count and add an image in the image grid
+                    </p>
+                    <p>
+                        <span>Toggle Count is {{dtc.toggleCounter}}</span>
+                    </p>
+                    <p>
+                        <input data-ng-model="dtc.toggleCounter" type="text" />
+                        <a data-ng-click="resetCounter()" class="btn btn-xs btn-success">Reset Counter</a>
+                    </p>
+                    <li class="jsonPhotoGrid" ng-repeat="photo in dtc.photos">
+                        {{photo.src}}
+                    </li>
+                    <p>
+                        <a data-ng-click="toggleImage()" class="btn btn-primary btn-sm">Click To Toggle Images</a>
+                        <a data-ng-click="addImage()" class="btn btn-success btn-sm">Click To Add Images</a>
+                        <a data-ng-click="deleteImage()" class="btn btn-danger btn-sm">Click To Delete Images</a>
+                        <a data-ng-click="appendImage()" class="btn btn-success btn-sm">Click To Append DOM Images</a>
+                        <a data-ng-click="removeImage()" class="btn btn-success btn-sm">Click To Remove DOM Images</a>
+                        <a data-ng-click="JSONAdd()" class="btn btn-success btn-sm">Click To Add using JSON</a>
+                    </p>
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <ul class="list-inline">
+                                <li data-ng-repeat="image in dtc.imageList">
+                                    <img ng-src="{{image.src}}" />
+                                    <span class="display-block">{{image.caption}}</span>
+                                    <div class="text-center">
+                                        <span class="edit-option btn btn-warning btn-sm">Edit</span>
+                                        <span data-ng-click="deleteThisImage($index)" class="delete-option btn btn-danger btn-sm">Del</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="block pull-left" data-ng-class="dtc.classToggle ? 'red' : 'blue'"></div>
+                            <div class="block pull-right" data-ng-class="{'is-hidden' : dtc.state}"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="image-grid" data-ng-show="dtc.showImage">
+                            <img src="http://lorempixel.com/200/200" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
