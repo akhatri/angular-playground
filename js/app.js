@@ -112,9 +112,16 @@
 	                url: 'http://jsonplaceholder.typicode.com/photos'
 	            })
 	            .then(function(response) {
-	                $scope.photos = response.data;
 	                console.log(response);
 	                console.log($scope.photos + ' from controller');
+
+	                if(response.data.length) {
+	                	$scope.photos = response.data;
+	                	//console.log($scope.photos);
+	                	//console.log($scope.photos.title);
+	                	//console.log($scope.photos.url);
+	                }
+
 	            })
 
 

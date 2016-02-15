@@ -25,8 +25,9 @@
                         <input data-ng-model="dtc.toggleCounter" type="text" />
                         <a data-ng-click="resetCounter()" class="btn btn-xs btn-success">Reset Counter</a>
                     </p>
-                    <li class="jsonPhotoGrid" ng-repeat="photo in dtc.photos">
-                        {{photo.src}}
+                    <li class="jsonPhotoGrid" ng-repeat="photo in photos">
+                        <h1>{{photo.title}}</h1>
+                        <h4>{{photo.url}}</h4>
                     </li>
                     <p>
                         <a data-ng-click="toggleImage()" class="btn btn-primary btn-sm">Click To Toggle Images</a>
