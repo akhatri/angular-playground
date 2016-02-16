@@ -1,0 +1,28 @@
+{
+  "name": "angular-playground",
+  "version": "1.0.0",
+  "description": "Playground for testing out Angular.js 1.x and 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akhatri/angular-playground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akhatri/angular-playground/issues"
+  },
+  "homepage": "https://github.com/akhatri/angular-playground#readme",
+  "dependencies": {
+    "http-server": "^0.8.5",
+    "local-web-server": "^1.1.0"
+  },
+  "local-web-server": {
+    "port": 8100,
+    "forbid": "*.json"
+  }
+}
