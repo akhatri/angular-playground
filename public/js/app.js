@@ -34,17 +34,17 @@
 	            var $images = $imageGrid.find('img');
 
 	            console.log($images);
-	            debugger;
+	            // debugger;
 	            for (i = 0; i < $images.length; i++) {
 	                console.log('images counter');
 	                console.log($images.length);
-	                $images.splice($images.length, 1);
+	                //$images.splice($images.length, 1);
 	            }
 	            // debugger;
 	            //$images.pop();       
 	            //$images.splice(4, 1);
 	            //console.log('images length ' + $images.length);
-
+	            $images.last().remove();
 	        });
 
 	        scope.$on('JSONEvent', function(dtc) {
