@@ -1,4 +1,16 @@
-	var app = angular.module('TEST', []);
+(function() {
+    'use strict';
+
+    angular
+        .module('Playground', ['ngAnimate'])
+    
+})();
+
+
+    
+
+
+var 
 	app.directive('directiveTest', dt);
 	dt.$inject = ['$window', '$timeout', '$filter', '$http'];
 
