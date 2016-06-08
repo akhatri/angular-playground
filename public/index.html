@@ -15,6 +15,15 @@
                     <div class="page-header">
                         <h1>AK Angular Test <small>A quick demo app</small></h1>
                     </div>
+
+
+                    <div ng-if="bool" class="fade">
+                       Fade me in out
+                    </div>
+                    <button ng-click="bool=true">Fade In!</button>
+                    <button ng-click="bool=false">Fade Out!</button>
+
+
                     <p>
                         When you click on the button below we want to increment the click count and add an image in the image grid
                     </p>
